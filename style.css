@@ -1,0 +1,475 @@
+.fit__guide {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #eef0fb
+}
+ 
+
+.MW_skinny .image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Skinny2x?cc&$retina$")
+}
+ 
+.MW_skinny .image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Skinny%202x?cc&$retina$")
+}
+ 
+.MW_skinny .image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Skinny2x?cc&$retina$")
+}
+ 
+.MW_slim .image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Slim2x?cc&$retina$")
+}
+ 
+.MW_slim .image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Slim%202x?cc&$retina$")
+}
+ 
+.MW_slim .image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Slim%202x?cc&$retina$")
+}
+ 
+.MW_baggy .image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Baggy2x?cc&$retina$")
+}
+ 
+.MW_baggy .image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Baggy2x?cc&$retina$")
+}
+ 
+.MW_baggy .image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Baggy2x?cc&$retina$")
+}
+ 
+.MW_relaxed .image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Relaxed2x?cc&$retina$")
+}
+ 
+.MW_relaxed .image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Relaxed2x?cc&$retina$")
+}
+ 
+.MW_relaxed .image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Relaxed2x?cc&$retina$")
+}
+ 
+.MW_straight .image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Straight2x?cc&$retina$")
+}
+ 
+.MW_straight .image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Straight2x?cc&$retina$")
+}
+ 
+.MW_straight .image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Straight2x?cc&$retina$")
+}
+ 
+.MW_tapered .image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Tapered%202x?cc&$retina$")
+}
+ 
+.MW_tapered .image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Tapered%202x?cc&$retina$")
+}
+ 
+.MW_tapered .image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Tapered%202x?cc&$retina$")
+}
+ 
+.MW_sprayon .image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Sprayonskinny2x?cc&$retina$")
+}
+ 
+.MW_sprayon .image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Sprayonskinny2x?cc&$retina$")
+}
+ 
+.MW_sprayon .image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Sprayonskinny2x?cc&$retina$")
+}
+ 
+.MW_bootcut .image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Bootcut%202x?cc&$retina$")
+}
+ 
+.MW_bootcut .image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Bootcut%202x?cc&$retina$")
+}
+ 
+.MW_bootcut .image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Bootcut%202x?cc&$retina$")
+}
+ 
+.block__slim {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Slim2x?cc&$retina$")
+}
+ 
+.block__skinny {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Skinny2x?cc&$retina$")
+}
+ 
+.block__baggy {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Baggy2x?cc&$retina$")
+}
+ 
+.block__tapered {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Tapered2x?cc&$retina$")
+}
+ 
+.block__straight {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Straight2x?cc&$retina$")
+}
+ 
+.block__relaxed {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Relaxed2x?cc&$retina$")
+}
+ 
+.block__sprayon {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Sprayonskinny2x?cc&$retina$")
+}
+ 
+.block__bootcut {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Bootcut2x?cc&$retina$")
+}
+ 
+.petite__square {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/20210806_DNT%20Fit%20Guide%20Extra%20DT%20-%20Petite%402x?cc&$retina$")
+}
+ 
+.tall__square {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT%20Fit%20Guide%20Extra%20DT%20-%20Plus%402x?cc&$retina$")
+}
+ 
+.maternity__square {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT%20Fit%20Guide%20Extra%20DT%20-%20Maternity%402x?cd&$retina$")
+}
+ 
+.plus__square {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT%20Fit%20Guide%20Extra%20DT%20-%20Tall%402x?cc&$retina$")
+}
+ 
+.our__plan__image {
+    width: 50%;
+    background-size: cover;
+    padding-top: 62%;
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Denim%20Sustainability%20DT2x?cc&$retina$")
+}
+ 
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer
+}
+ 
+div[class^="block__"] {
+    position: relative;
+    padding-top: 42%;
+    background-size: cover;
+    width: 33.3%;
+    max-width: 33.3%
+}
+ 
+.blocks h3 {
+    color: #ffa89b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 600;
+    white-space: pre
+}
+ 
+.link__cover {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute
+}
+ 
+@media (max-width: 1025px) {
+    .blog img {
+        width: 40%
+    }
+}
+ 
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .square_block {
+        height: 100vh !important;
+        width: 100% !important
+    }
+    .main_square {
+        height: 70vh;
+        width: 100% !important;
+        padding-bottom: 0% !important
+    }
+}
+ 
+
+@media (max-width: 767px) {
+    .fit__guide__hero {
+        padding-top: 64%;
+        background-position-x: 14%
+    }
+ 
+    div[class^="block__"] {
+        width: 50%;
+        max-width: 50%;
+        padding-top: 63%
+    }
+}
+.flex__modal::-webkit-scrollbar {
+    display: none
+}
+ 
+.flex__modal {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+.box {
+    width: 25%;
+    padding-top: 33%;
+    background-size: cover;
+    position: relative
+}
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 10px;
+    text-align: center;
+    padding-bottom: 1.5rem
+}
+ 
+.options button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 700
+}
+ 
+@media (min-width: 768px) {
+    .options {
+        display: none
+    }
+}
+ 
+
+@media (max-width: 767px) {
+    .box {
+        width: 50%;
+        padding-top: 66%
+    }
+    .mobile__box {
+        width: 50%;
+        padding-top: 66%;
+        display: block;
+        background-color: #ffa89b
+    }
+}
+ 
+
+.flex__modal {
+    display: none;
+    opacity: 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    animation: visible 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+ 
+@keyframes visible {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+ 
+.link_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+ 
+.square {
+    padding-bottom: 31%;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative
+}
+ 
+.main_square {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative
+}
+ 
+.square__cta {
+    padding: 14px 35px;
+    margin: 0;
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center
+}
+ 
+.image__one {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/20210806_DNT%20Hero%20DT%402x?cc&$retina$");
+    padding-bottom: 62.5%
+}
+ 
+.image__one h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-transform: uppercase;
+    color: #ffa89b;
+    font-size: 5rem;
+    font-weight: 700;
+    width: 100%;
+    white-space: pre-line;
+    line-height: 5.9rem;
+    text-align: center
+}
+ 
+.image__one .square__cta {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    left: 50%
+}
+ 
+.square_block {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative
+}
+ 
+.image__two {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/20210806_DNT%20Extra%201%20DT%402x?cc&$retina$")
+}
+ 
+.image__three {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/20210806_DNT%20Extra%202%20DT%20%402x?cc&$retina$")
+}
+ 
+
+.image__four {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/20210806_DNT%20Extra%203%20DT%402x?cc&$retina$")
+}
+ 
+.image__five {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/20210806_DNT%20Extra%204%20DT%402x?cc&$retina$")
+}
+ 
+.image__six {
+    background-image: url("https://images.riverisland.com/is/image/RiverIsland/20210806_DNT%20IMG4%20Bum%20Sculpt%20DT2x?cc&$retina$")
+}
+ 
+.close__modal {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 27px;
+    height: 32px
+}
+ 
+.style__modal {
+    height: 35px;
+    width: 2px;
+    margin-left: 12px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+    Z-index: 1
+}
+ 
+.style__modal__cross {
+    height: 35px;
+    width: 2px;
+    background-color: #ffffff;
+    transform: rotate(90deg);
+    Z-index: 2
+}
+ 
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 25px;
+    z-index: 99
+}
+ 
+.options button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 700;
+    z-index: 99999
+}
+ 
+@media (min-width: 768px) {
+    .options {
+        display: none
+    }
+}
+ 
+@media (max-width: 767px) {
+ 
+    .flex__modal {
+        flex-direction: column;
+       background-color: #ffffff
+    }
+    .image__one {
+        padding-bottom: 124.5% !important;
+        height: auto !important;
+        width: 100% !important
+    }
+ 
+    .square_block {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 125vw !important
+    }
+}
+ 
+@media screen and (orientation: landscape) {
+    .portrait__flex {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%
+    }
+}
+ 
+@media screen and (orientation: portrait) {
+    .landscape__block {
+        display: block;
+        width: 100%;
+        height: 100%
+    }
+}
