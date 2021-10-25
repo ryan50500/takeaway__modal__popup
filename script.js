@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const modals = document.querySelectorAll(".flex__modal");
     const openModalImage = document.querySelectorAll(".open__modal");
     const optionButtons = document.querySelectorAll(".option__button");
- 
+    // update country name
+    const countryName = document.querySelector('.mobile__jeans__title');
+
   
     // Modal change options on mobile
     for (i = 0; i < optionButtons.length; i++) {
@@ -44,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         openTheModal();
     }
  
-
     function openTheModal() {
         openModalImage[i].addEventListener('click', function() {
             for (i = 0; i < modals.length; i++) {
@@ -57,5 +58,51 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
  
 
- 
+    // Change country sidebar
+     // change country
+     const countryOptions = document.querySelectorAll('.country-radio');
+   
+    
+     // open change country slider
+     document.getElementById('change_country').addEventListener('click', function(){
+           document.querySelector('.delivery-country-selector__overlay').classList.toggle('slide');
+     });
+  
+   
+      // close change country slider
+      document.querySelector('.cross').addEventListener('click', function(){
+           document.querySelector('.delivery-country-selector__overlay').classList.toggle('slide');
+   });
+
+   
+     
+     // SEARCH FILTER
+           const search = document.getElementById("country-search");
+      
+           search.addEventListener("keyup", filterProducts);
+  
+           function filterProducts(e) {
+               searchresult = search.value;
+               console.log(searchresult);
+             const userInput = searchresult.toLowerCase();
+             // console.log(productName[0]);
+             // this loop works with IE
+             for (i = 0; i < countryOptions.length; i++) {
+                  const countryDataSet = countryOptions[i].dataset.country
+               if (countryDataSet.toLowerCase().indexOf(userInput) != -1) {
+                       countryOptions[i].style.display = "block";
+               } else {
+                       countryOptions[i].style.display = "none"
+               }
+             }
+           }
+
+        //    update country name to the whichever country the user selects in side menu
+        for (i = 0; i < countryOptions.length; i++) {
+           countryOptions[i].addEventListener('click', function(){
+                countryName.innerHTML = this.dataset.country;
+         });
+        }
+
+
   });
