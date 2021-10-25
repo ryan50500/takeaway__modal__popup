@@ -1,10 +1,15 @@
+/* hide images for now.... */
+.blocks * {
+    background-image: none !important;
+}
+
+
 .fit__guide {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     background-color: #eef0fb
 }
- 
 
 .MW_skinny .image__one {
     background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Skinny2x?cc&$retina$")
