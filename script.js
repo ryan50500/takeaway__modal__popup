@@ -65,12 +65,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
      // open change country slider
      document.getElementById('change_country').addEventListener('click', function(){
+           document.querySelector('.cross .style__modal').classList.toggle('black__cross');
+           document.querySelector('.cross .style__modal__cross').classList.toggle('black__cross');
            document.querySelector('.delivery-country-selector__overlay').classList.toggle('slide');
      });
   
    
       // close change country slider
       document.querySelector('.cross').addEventListener('click', function(){
+           document.querySelector('.cross .style__modal').classList.toggle('black__cross');
+           document.querySelector('.cross .style__modal__cross').classList.toggle('black__cross');
            document.querySelector('.delivery-country-selector__overlay').classList.toggle('slide');
    });
 
