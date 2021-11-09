@@ -1,7 +1,3 @@
-/* hide images for now.... */
-.blocks * {
-    background-image: none !important;
-}
 
 .close__modal {
     position: fixed;
@@ -35,108 +31,15 @@
     background-color: #eef0fb
 }
 
-.MW_skinny .image__one {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Skinny2x?cc&$retina$")
+
+ 
+.block__indian {
+    background-image: url("./images/indian.jpg");
 }
  
-.MW_skinny .image__two {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Skinny%202x?cc&$retina$")
-}
- 
-.MW_skinny .image__three {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Skinny2x?cc&$retina$")
-}
- 
-.MW_slim .image__one {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Slim2x?cc&$retina$")
-}
- 
-.MW_slim .image__two {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Slim%202x?cc&$retina$")
-}
- 
-.MW_slim .image__three {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Slim%202x?cc&$retina$")
-}
- 
-.MW_baggy .image__one {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Baggy2x?cc&$retina$")
-}
- 
-.MW_baggy .image__two {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Baggy2x?cc&$retina$")
-}
- 
-.MW_baggy .image__three {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Baggy2x?cc&$retina$")
-}
- 
-.MW_relaxed .image__one {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Relaxed2x?cc&$retina$")
-}
- 
-.MW_relaxed .image__two {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Relaxed2x?cc&$retina$")
-}
- 
-.MW_relaxed .image__three {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Relaxed2x?cc&$retina$")
-}
- 
-.MW_straight .image__one {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Straight2x?cc&$retina$")
-}
- 
-.MW_straight .image__two {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Straight2x?cc&$retina$")
-}
- 
-.MW_straight .image__three {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Straight2x?cc&$retina$")
-}
- 
-.MW_tapered .image__one {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Tapered%202x?cc&$retina$")
-}
- 
-.MW_tapered .image__two {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Tapered%202x?cc&$retina$")
-}
- 
-.MW_tapered .image__three {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Tapered%202x?cc&$retina$")
-}
- 
-.MW_sprayon .image__one {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Sprayonskinny2x?cc&$retina$")
-}
- 
-.MW_sprayon .image__two {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Sprayonskinny2x?cc&$retina$")
-}
- 
-.MW_sprayon .image__three {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Sprayonskinny2x?cc&$retina$")
-}
- 
-.MW_bootcut .image__one {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20Hero%20-%20Bootcut%202x?cc&$retina$")
-}
- 
-.MW_bootcut .image__two {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG2%20-%20Bootcut%202x?cc&$retina$")
-}
- 
-.MW_bootcut .image__three {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Pop%20Out%20IMG3%20-%20Bootcut%202x?cc&$retina$")
-}
- 
-.block__slim {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Slim2x?cc&$retina$")
-}
- 
-.block__skinny {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Skinny2x?cc&$retina$")
+.block__chinese {
+    background-image: url("./images/chinese.jpg");
+    background-position-x: 50%;
 }
  
 .block__baggy {
