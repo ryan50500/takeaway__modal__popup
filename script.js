@@ -109,4 +109,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
 
 
+
+        // TESTING (call a function on click to set images)
+            setTimeout(function(){
+                document.querySelector('.block__turkish').style.backgroundImage = "url('https://ryan50500.github.io/takeaway/images/indian.jpg')";
+            }, 2000);
+         // TESTING
+
   });
