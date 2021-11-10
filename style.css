@@ -1,8 +1,48 @@
+.block__dansak {
+    background-image: url("./images/dansak.jpg");
+}
+
+.block__korma {
+    background-image: url("./images/korma.jpg");
+}
+
+.block__biryani {
+    background-image: url("./images/Biryani.jpg");
+}
+
+.block__curry {
+    background-image: url("./images/curry.jpg");
+    background-position: right;
+}
+
+.block__rogan {
+    background-image: url("./images/rogan.jpg");
+}
+
+.block__tikka {
+    background-image: url("./images/tikka.jpg");
+    background-position: bottom;
+}
+
+.block__naan {
+    background-image: url("./images/nann.jpg");
+}
+
+.block__keema {
+    background-image: url("./images/keema.jpg");
+}
+
+.block__bhaji {
+    background-image: url("./images/bhaji.jpg");
+    background-position: bottom;
+    background-size: 225% !important;
+    background-position-y: 0;
+}
 
 .close__modal {
     position: fixed;
     top: 10px;
-    right: 10px;
+    right: 25px;
     width: 27px;
     height: 32px
 }
@@ -31,43 +71,42 @@
     background-color: #eef0fb
 }
 
-
+.MW_skinny .image__one {
+    background-image: url("")
+}
  
-.block__indian {
-    background-image: url("./images/indian.jpg");
-    background-size: cover;
+.MW_slim .image__one {
+    background-image: url("")
 }
-.block__chinese {
-    background-image: url("./images/chinese.jpg");
-    background-position-x: 50%;
-    background-size: cover;
+ 
+.MW_baggy .image__one {
+    background-image: url("")
 }
-.block__turkish {
-    background-image: url("./images/turkish2.jpg");
-    background-position: center;
-    background-size: cover;
+ 
+.MW_relaxed .image__one {
+    background-image: url("")
 }
-.block__korean {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Tapered2x?cc&$retina$")
+ 
+.MW_straight .image__one {
+    background-image: url("")
 }
-.block__british {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT_%20MW%20Fit%20Guide%20DT%20-%20Straight2x?cc&$retina$")
+ 
+.MW_tapered .image__one {
+    background-image: url("")
 }
-.block__spanish {
-    background-image: url("./images/spanish.jpg");
-    background-position: center;
-}
-.block__french {
-    background-image: url("./images/french.jpg");
-    background-position: center;
-}
-.block__korean {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/20210806_DNT%20Fit%20Guide%20Extra%20DT%20-%20Petite%402x?cc&$retina$")
-}
-.block__polish {
-    background-image: url("https://images.riverisland.com/is/image/RiverIsland/c20210806_DNT%20Fit%20Guide%20Extra%20DT%20-%20Plus%402x?cc&$retina$")
+ 
+.MW_tapered .image__one {
+    background-image: url("")
 }
 
+.MW_tapered .image__one {
+    background-image: url("")
+}
+ 
+.MW_tapered .image__one {
+    background-image: url("")
+}
+ 
 
  
 .blocks {
@@ -79,23 +118,22 @@
 div[class^="block__"] {
     position: relative;
     padding-top: 42%;
+    background-size: cover;
     width: 33.3%;
     max-width: 33.3%
 }
  
 .blocks h3 {
-    color: white;
+    color: black;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    white-space: pre;
     font-family: cursive;
-    margin: 0;
-    background-color: darkorange;
-    width: 69%;
-    text-align: center;
-    border-radius: 30px;
+    text-shadow: 2px 2px darkorange;
 }
  
 .link__cover {
@@ -250,7 +288,11 @@ div[class^="block__"] {
     font-weight: 700;
     text-align: center
 }
-
+ 
+.image__one {
+    padding-bottom: 62.5%
+}
+ 
 .image__one h2 {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -279,7 +321,6 @@ div[class^="block__"] {
     flex-wrap: wrap;
     position: relative
 }
- 
 
 
  
