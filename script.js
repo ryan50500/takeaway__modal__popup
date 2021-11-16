@@ -109,6 +109,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 countryName.innerHTML = this.dataset.country;
          });
         }
-
-
   });
+
+
+   // Calculate orders
+   const items = document.querySelectorAll('.modal__info div');
+
+   for (let i = 0; i < items.length; i++) {
+
+         items[i].addEventListener('click', function(){
+
+            let priceOfItem = this.querySelector('span').innerHTML;
+            let priceOfItemInteger = parseInt(priceOfItem);
+            // let priceToInteger = priceOfItem;     
+            newUpdated(priceOfItemInteger);
+        });
+
+        function newUpdated(priceOfItemInteger){
+            const currentTotal =  document.querySelector('.total').innerHTML;
+            const currentTotalParsed  = parseInt(currentTotal);
+            // 'priceOfItemInteger' is the item that was clicked on
+            document.querySelector('.total').innerHTML = currentTotalParsed + priceOfItemInteger;
+        }
+
+   }
+
+
