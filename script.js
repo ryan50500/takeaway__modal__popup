@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function closeModals() {
         closeModalButtons[i].addEventListener('click', function() {
             document.querySelector('body').style.overflow = 'auto';
+            document.querySelector('.dark__overlay').style.display = 'none';
             for (i = 0; i < modals.length; i++) {
                 modals[i].style.display = "none";
             }
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function openTheModal() {
         openModalImage[i].addEventListener('click', function() {
             document.querySelector('body').style.overflow = 'hidden';
+            document.querySelector('.dark__overlay').style.display = 'block';
             for (i = 0; i < modals.length; i++) {
                 if (this.dataset.modaltype === modals[i].dataset.modaltype) {
                     modals[i].style.display = "flex";
@@ -118,12 +120,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
    const items = document.querySelectorAll('.modal__info div');
 
    for (let i = 0; i < items.length; i++) {
-
          items[i].addEventListener('click', function(){
-
             let priceOfItem = this.querySelector('span').innerHTML;
             let priceOfItemInteger = parseFloat(priceOfItem);
-  
             newUpdated(priceOfItemInteger);
         });
 
@@ -133,7 +132,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // 'priceOfItemInteger' is the item that was clicked on
             document.querySelector('.total').innerHTML = (currentTotalParsed + priceOfItemInteger).toFixed(2);
         }
-
    }
+
+
 
 
