@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
  
     function closeModals() {
         closeModalButtons[i].addEventListener('click', function() {
+            document.querySelector('body').style.overflow = 'auto';
             for (i = 0; i < modals.length; i++) {
                 modals[i].style.display = "none";
             }
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
  
     function openTheModal() {
         openModalImage[i].addEventListener('click', function() {
+            document.querySelector('body').style.overflow = 'hidden';
             for (i = 0; i < modals.length; i++) {
                 if (this.dataset.modaltype === modals[i].dataset.modaltype) {
                     modals[i].style.display = "flex";
