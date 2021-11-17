@@ -135,5 +135,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
    }
 
 
+    // close modal if dark overlay is clicked
+    document.querySelector('.dark__overlay').addEventListener('click', function(){
+        const modals = document.querySelectorAll(".flex__modal");
+        for (i = 0; i < modals.length; i++) {
+            modals[i].style.display = "none";
+        }
+        document.querySelector('body').style.overflow = 'auto';
+        document.querySelector('.dark__overlay').style.display = 'none';
+    });
 
 
