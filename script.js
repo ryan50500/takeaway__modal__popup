@@ -109,8 +109,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         //    update country name to the whichever country the user selects in side menu
         for (i = 0; i < countryOptions.length; i++) {
-           countryOptions[i].addEventListener('click', function(){
+           countryOptions[i].addEventListener('click', function(e){
                 countryName.innerHTML = this.dataset.country;
+                // if currency is already zloty and user clicks on zloty
+                if (e.target.id === "zloty" && document.querySelector('.currency__symbol').innerHTML === 'zł' ) {
+                    return; 
+                }
+                else if  (e.target.id === "zloty") {
+                    covertToZloty();
+                }
+                // convert from zloty to pounds
+                 else if (document.querySelector('.currency__symbol').innerHTML === 'zł' && e.target.id === "pounds") {
+                    zlotyToPounds();
+                }
          });
         }
   });
@@ -146,3 +157,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
 
+
+    // change currency - polish zloty
+   function covertToZloty(){
+        console.log('zloty clicked')
+        const items = document.querySelectorAll('.modal__info div .item');
+        const total = document.getElementById('thetotal');
+        const currencySymbol = document.querySelector('.currency__symbol');
+        const itemCurrency = document.querySelectorAll('.item__currency');
+        const polishZloty = 5.52
+        for (let i = 0; i < items.length; i++) {
+            items[i].innerHTML = (items[i].innerHTML*polishZloty).toFixed(2);
+        }
+        total.innerHTML = (total.innerHTML*polishZloty).toFixed(2);
+        currencySymbol.innerHTML = 'zł';
+        for (i = 0; i < itemCurrency.length; i++) {
+            itemCurrency[i].innerHTML = 'zł';
+        }
+    };
+
+
+        // change currency - british pounds
+   function zlotyToPounds(){
+        console.log('zloty to pounds');
+        const items = document.querySelectorAll('.modal__info div .item');
+        const total = document.getElementById('thetotal');
+        const currencySymbol = document.querySelector('.currency__symbol');
+        const itemCurrency = document.querySelectorAll('.item__currency');
+        const britishPounds = 5.52;
+        for (let i = 0; i < items.length; i++) {
+            items[i].innerHTML = (items[i].innerHTML/britishPounds).toFixed(2);
+        }
+        total.innerHTML = (total.innerHTML/britishPounds).toFixed(2);
+        currencySymbol.innerHTML = '£';
+            for (i = 0; i < itemCurrency.length; i++) {
+                itemCurrency[i].innerHTML = '£';
+            }
+};
+
+  
