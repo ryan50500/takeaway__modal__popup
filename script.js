@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
    for (let i = 0; i < items.length; i++) {
          items[i].addEventListener('click', function(){
-            let priceOfItem = this.querySelector('span').innerHTML;
+            let priceOfItem = this.querySelector('.item').innerHTML;
             let priceOfItemInteger = parseFloat(priceOfItem);
             newUpdated(priceOfItemInteger);
         });
