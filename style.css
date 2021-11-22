@@ -550,7 +550,8 @@ h2#change_country {
 .modal__info div {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    align-items: center;
+    padding: 0.5rem 0;
 }
 .add {
     padding: 1rem 0;

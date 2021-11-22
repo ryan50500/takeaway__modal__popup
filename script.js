@@ -107,12 +107,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
              }
            }
 
+           
         //    update country name to the whichever country the user selects in side menu
         for (i = 0; i < countryOptions.length; i++) {
            countryOptions[i].addEventListener('click', function(e){
                 countryName.innerHTML = this.dataset.country;
                 // if currency is already zloty and user clicks on zloty
-                if (e.target.id === "zloty" && document.querySelector('.currency__symbol').innerHTML === 'zł' ) {
+                if (e.target.id === "zloty" && document.querySelector('.currency__symbol').innerHTML ===  'zł' ) {
                     return; 
                 }
                 else if  (e.target.id === "zloty") {
