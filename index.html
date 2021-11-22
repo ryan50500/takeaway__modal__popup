@@ -12,8 +12,6 @@
 
 <!-- Page container -->
 <div class="fit__guide">
-
-    <button>change currency</button>
  
   <!-- change country -->
   <h2 id="change_country">Change Currency</h2>
@@ -60,10 +58,10 @@
             <h3>Dansak</h3>
             <h4>Choose one</h4>
             <div class="modal__info">
-                <div>Vegetable<div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">5.00</span></div></div>
-                <div>Chicken<div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span<span class="item">6.50</span></div></div>
-                <div>Lamb<div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">6.50</span></div></div>
-                <div>Mix meat<div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">7.00</span></div></div>
+                <div>Vegetable<span class="minus">-</span><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">5.00</span></div></div>
+                <div>Chicken<span class="minus">-</span><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">6.50</span></div></div>
+                <div>Lamb<span class="minus">-</span><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">6.50</span></div></div>
+                <div>Mix meat<span class="minus">-</span><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">7.00</span></div></div>
             </div>
             <div class="add">Add to order<div><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span id="thetotal" class="total">0</span></div></div>
          </div>
@@ -226,11 +224,11 @@
         <button class="searchIcon"></button>
     </div>
     <div class="country-list" id="country-list">
-            <label class="country-radio" data-iso-code="UK" id="pounds" data-country="British">British Pounds<input name="radio" type="radio" /><span class="checkmark"></span></label>
+            <label class="country-radio english" data-iso-code="UK" id="pounds" data-country="British">British Pounds<input name="radio" type="radio" /><span class="checkmark"></span></label>
             <label class="country-radio" data-iso-code="FR" id="euros" data-country="Euro">Euros<input name="radio" type="radio" /><span class="checkmark"></span></label>
-            <label class="country-radio" data-iso-code="JP" id="yen" data-country="Japan">Japanese Yen<input name="radio" type="radio" /><span class="checkmark"></span></label>
-            <label class="country-radio" data-iso-code="PL" id="zloty" data-country="Polish">Polish Zloty<input name="radio" type="radio" /><span class="checkmark"></span></label>
-            <label class="country-radio" data-iso-code="ES" id="dollar" data-country="US">US Dollar<input name="radio" type="radio" /><span class="checkmark"></span></label>         
+            <label class="country-radio japanese yen" data-iso-code="JP" id="yen" data-country="Japan">Japanese Yen<input name="radio" type="radio" /><span class="checkmark"></span></label>
+            <label class="country-radio zloty" data-iso-code="PL" id="zloty" data-country="Polish">Polish Zloty<input name="radio" type="radio" /><span class="checkmark"></span></label>
+            <label class="country-radio dollar" data-iso-code="ES" id="dollar" data-country="US">US Dollar<input name="radio" type="radio" /><span class="checkmark"></span></label>         
         </div>
 </div>
 

@@ -564,8 +564,16 @@ h2#change_country {
 }
 .modal__holder * {
     font-family: Arial, sans-serif;
+    cursor: pointer;
 }
-
+.added__item {
+    color: #017a39;
+    font-weight: 600;
+}
+.minus {
+    display: none;
+    padding: 3% 7%;
+}
 
 
 .dark__overlay {

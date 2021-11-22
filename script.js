@@ -101,7 +101,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   const countryDataSet = countryOptions[i].dataset.country
                if (countryDataSet.toLowerCase().indexOf(userInput) != -1) {
                        countryOptions[i].style.display = "block";
-               } else {
+               } 
+               else if (countryOptions[i].className.match(userInput)) {
+                     countryOptions[i].style.display = "block";
+               }
+               else {
                        countryOptions[i].style.display = "none"
                }
              }
@@ -197,3 +201,41 @@ document.addEventListener("DOMContentLoaded", function(event) {
 };
 
   
+
+// quantity of items added to order
+
+for (let i = 0; i < items.length; i++) {
+      items[i].addEventListener('click', function(){
+        this.classList.add('added__item');
+        this.querySelector('.minus').style.display = 'block';
+        this.querySelector('.quantity').innerHTML++;
+        });
+      };
+
+
+
+    //   remove added item
+    const minusButtons = document.querySelectorAll('.minus');
+
+      for (let i = 0; i < minusButtons.length; i++) {
+        minusButtons[i].addEventListener('click', function(e){
+            e.stopPropagation();
+            console.log('minus clicked')
+            console.log(this.nextElementSibling);
+            this.parentElement.querySelector('.quantity').innerHTML--;
+
+            // update total
+            let priceOfItem = this.parentElement.querySelector('.item').innerHTML;
+            let priceOfItemInteger = parseFloat(priceOfItem);
+            newUpdated(priceOfItemInteger);
+    
+            function newUpdated(priceOfItemInteger){
+                const currentTotal =  document.querySelector('.total').innerHTML;
+                const currentTotalParsed  = parseFloat(currentTotal);
+                // 'priceOfItemInteger' is the item that was clicked on
+                document.querySelector('.total').innerHTML = (currentTotalParsed - priceOfItemInteger).toFixed(2);
+            }
+          });
+        };
+
+
