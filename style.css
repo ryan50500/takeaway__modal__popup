@@ -1,3 +1,81 @@
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
 .block__dansak {
     background-image: url("./images/dansak.jpg");
 }
@@ -39,6 +117,21 @@
     background-position-y: 0;
 }
 
+/* your orders */
+div#orders {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(30%,2rem);
+}
+
+.new__el {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .close__modal {
     position: fixed;
     top: 9px;
@@ -75,7 +168,10 @@
     overflow: hidden;
     background-color: #eef0fb
 }
-
+.fit__guide * {
+    font-size: 19px;
+    font-family: Arial,sans-serif;
+}
 .MW_skinny .image__one {
     background-image: url("")
 }
@@ -188,6 +284,10 @@ div[class^="block__"] {
 .flex__modal {
     -ms-overflow-style: none;
     scrollbar-width: none
+}
+.flex__modal * {
+    font-size: 19px;
+    font-family: Arial,sans-serif;
 }
 .box {
     width: 25%;
@@ -567,14 +667,36 @@ h2#change_country {
     cursor: pointer;
 }
 .added__item {
-    color: #017a39;
+    color: #fb6100;
     font-weight: 600;
 }
 .minus {
-    display: none;
-    padding: 3% 7%;
+    visibility: hidden;
+    position: relative;
+    right: 10px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
 }
-
+.minus:before {
+    height: 3.5px;
+    width: 18px;
+    content: "";
+    background-color: #FB6106;
+}
+.plus {
+    font-size: 40px;
+    position: relative;
+    left: 18px;
+    bottom: 1px;
+    font-weight: 100;
+    color: #FB6106;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+.quantity{
+    position: relative;
+    right: 10px;
+}
 
 .dark__overlay {
     position: fixed;

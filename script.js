@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
  
     const closeModalButtons = document.querySelectorAll(".close__modal");
@@ -129,15 +132,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
          });
         }
-  });
+  
 
 
    // Calculate orders
-   const items = document.querySelectorAll('.modal__info div');
+   const items = document.querySelectorAll('.modal__info .plus');
 
    for (let i = 0; i < items.length; i++) {
          items[i].addEventListener('click', function(){
-            let priceOfItem = this.querySelector('.item').innerHTML;
+            let priceOfItem = this.parentElement.querySelector('.item').innerHTML;
             let priceOfItemInteger = parseFloat(priceOfItem);
             newUpdated(priceOfItemInteger);
         });
@@ -202,13 +205,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   
 
-// quantity of items added to order
-
+// add item to order
 for (let i = 0; i < items.length; i++) {
       items[i].addEventListener('click', function(){
-        this.classList.add('added__item');
-        this.querySelector('.minus').style.display = 'block';
-        this.querySelector('.quantity').innerHTML++;
+        this.parentElement.classList.add('added__item');
+        this.parentElement.querySelector('.minus').style.visibility = 'visible';
+        this.parentElement.querySelector('.quantity').innerHTML++;
+        this.parentElement.querySelector('.quantity').style.visibility = 'visible';
         });
       };
 
@@ -235,7 +238,33 @@ for (let i = 0; i < items.length; i++) {
                 // 'priceOfItemInteger' is the item that was clicked on
                 document.querySelector('.total').innerHTML = (currentTotalParsed - priceOfItemInteger).toFixed(2);
             }
+            // if quanity of item is 0, hide the minus and quanitiy 
+            if ( this.parentElement.querySelector('.quantity').innerHTML == 0) {
+                this.parentElement.querySelector('.minus').style.visibility = 'hidden';
+                this.parentElement.querySelector('.quantity').style.visibility = 'hidden';
+                this.parentElement.classList.remove('added__item');
+            }
           });
         };
 
 
+
+    //  Add orders to cart
+    const buttons = document.querySelectorAll('.poo');
+    const orders = document.getElementById('orders');
+
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function() {
+            console.log('order added');
+            const newOrder = document.createElement('p');
+            newOrder.setAttribute('id', 'wof');
+            newOrder.innerHTML = this.dataset.user;
+            console.log('new element created');
+            // newOrder.classList.add('new__el');
+            orders.append(newOrder);
+            console.log('addded order!');
+        });
+    }
+
+
+});
