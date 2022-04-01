@@ -118,13 +118,23 @@ select {
 }
 
 /* your orders */
-div#orders {
+.basket {
     position: fixed;
     top: 0;
     right: 0;
-    transform: translate(30%,2rem);
+    transform: translate(100%, 2rem);
+    transition: 0.2s transform ease-in;
 }
 
+#basket__icon {
+    background-color: #fb6100;
+    padding: 10px;
+    width: 50px;
+    border-radius: 50%;
+}
+.slide__basket {
+    transform: translate(0, 2rem);
+}
 .new__el {
     position: absolute;
     left: 50%;
@@ -653,7 +663,7 @@ h2#change_country {
     align-items: center;
     padding: 0.5rem 0;
 }
-.add {
+.add__to__order {
     padding: 1rem 0;
     background-color: #efedea;
     width: 68%;
@@ -669,6 +679,7 @@ h2#change_country {
 .added__item {
     color: #fb6100;
     font-weight: 600;
+    display: flex;
 }
 .minus {
     visibility: hidden;

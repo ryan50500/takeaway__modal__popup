@@ -250,19 +250,69 @@ for (let i = 0; i < items.length; i++) {
 
 
     //  Add orders to cart
-    const buttons = document.querySelectorAll('.poo');
-    const orders = document.getElementById('orders');
+    const addToOrder = document.querySelectorAll('.add__to__order');
+    const basket = document.querySelectorAll('.basket')[0];
+    
 
-    for (i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function() {
-            console.log('order added');
-            const newOrder = document.createElement('p');
-            newOrder.setAttribute('id', 'wof');
-            newOrder.innerHTML = this.dataset.user;
-            console.log('new element created');
-            // newOrder.classList.add('new__el');
-            orders.append(newOrder);
-            console.log('addded order!');
+    for (i = 0; i < addToOrder.length; i++) {
+        addToOrder[i].addEventListener('click', function() {
+
+            // if dish has already been added , do nothing
+            if (basket.querySelector('p')) {
+                console.log('something is added kurwa');
+                return;
+                // NOW WE NEED TO ADD TO CURRENT QUANTITY
+            }
+
+
+            // show orders basket
+            basket.classList.add('slide__basket');
+            // get all the dishes 
+            const allDishes = this.closest('.modal__holder').querySelector('.modal__info').children;
+          
+            // loop through dishes and return dishes which has at least 1 added to basket
+            for (i = 0; i < allDishes.length; i++) {
+                if (allDishes[i].querySelector('.quantity').innerHTML > 0) {
+
+                    // holds the dish information added to cart
+                    const dishInfo = document.createElement('p');
+
+                    // create the dish name
+                    const dishName = document.createElement('span');
+                    dishName.setAttribute('class', 'dish__in__cart');
+                    const infoToAdd = allDishes[i].querySelector('.dish__name').innerHTML;
+
+                    // append dish name HTML to dish name element we just created
+                    dishName.append(infoToAdd);
+
+                    // create the dish quantity
+                    const dishQuantity = document.createElement('span');
+                    dishQuantity.setAttribute('class', 'dish__quantity__cart');
+                    const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
+
+                     // append dish quanity HTML to dish quanity element we just created
+                    dishQuantity.append(quanityToAdd);
+
+
+                    // add the dish name and quantity to dish holder
+                    dishInfo.append(dishName, dishQuantity)
+
+                    // append the dish to the basket
+                    basket.append(dishInfo);
+
+
+                    // console.log(allDishes[i]);
+                    // addDishesToBasket(allDishes[i].querySelector('.dish__name'), allDishes[i].querySelector('.quantity') );
+                }
+            }
+
+
+
+            // function addDishesToBasket(dishName, quantity){
+            //     basket.append(dishName, quantity );
+            // }
+
+
         });
     }
 
