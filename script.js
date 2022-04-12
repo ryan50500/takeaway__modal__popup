@@ -270,10 +270,23 @@ for (let i = 0; i < items.length; i++) {
                 console.log('an item has been added already');
                 // update quantities of items
                 updateQuanities();
-             }
-          }
-        }
+                    function updateQuanities(){
+                          // when the 'add to order' button is cliked...
+                         const CurrentItemQuantities = documen.querySelectorAll('.dish__quantity__cart');
 
+                        for (i = 0; i < CurrentItemQuantities.length; i++) {
+                            CurrentItemQuantities[i].innerHTML = 12;
+                        }
+                    // // create the dish quantity
+                    // const dishQuantity = document.createElement('span');
+                    // dishQuantity.setAttribute('class', 'dish__quantity__cart');
+                    // const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
+                    // dishQuantity.append(quanityToAdd);
+                    // console.log('update quantities function called');
+                   }
+                 }
+              }
+           }
             // show orders basket
             basket.classList.add('slide__basket');
             // get all the dishes 
@@ -294,18 +307,14 @@ for (let i = 0; i < items.length; i++) {
                     // create the dish type
                     const DishType = allDishes[i].querySelector('.dish__type').innerHTML;
                    
-
                     // create the dish quantity
                     const dishQuantity = document.createElement('span');
                     dishQuantity.setAttribute('class', 'dish__quantity__cart');
                     const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
                     dishQuantity.append(quanityToAdd);
 
-
                     // append dish name and type HTML to dish name element we just created
                     dishElement.append(DishName, DishType, dishQuantity);
-
-
 
                     // add the dish and type/quanity to the holder
                     dishHolder.append(dishElement)
