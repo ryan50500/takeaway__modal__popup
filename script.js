@@ -252,69 +252,68 @@ for (let i = 0; i < items.length; i++) {
     //  Add orders to cart
     const addToOrder = document.querySelectorAll('.add__to__order');
     const basket = document.querySelectorAll('.basket')[0];
-    
+    const quantity = document.querySelectorAll('.quantity');
 
+    
+    // when the 'add to order' button is cliked...
     for (i = 0; i < addToOrder.length; i++) {
         addToOrder[i].addEventListener('click', function() {
-
+            for (i = 0; i < quantity.length; i++) {
+                // get the quantity innerHTML of all items 
+                const quantityOfDishesStrings = quantity[i].innerHTML;
+                // convert these from strings to intergers
+                for (i = 0; i < quantityOfDishesStrings.length; i++) {
+                    const quantityOfDishes = parseFloat(quantityOfDishesStrings[i]);
+     
             // if dish has already been added , do nothing
-            if (basket.querySelector('p')) {
-                console.log('something is added kurwa');
-                return;
-                // NOW WE NEED TO ADD TO CURRENT QUANTITY
-            }
-
+            if ((quantityOfDishes > 0) && (this.closest('.modal__holder').querySelector('.modal__info').querySelector('.added__item'))) {
+                console.log('an item has been added already');
+                // update quantities of items
+                updateQuanities();
+             }
+          }
+        }
 
             // show orders basket
             basket.classList.add('slide__basket');
             // get all the dishes 
             const allDishes = this.closest('.modal__holder').querySelector('.modal__info').children;
+            // dish name
+            const DishName = this.closest('.modal__holder').querySelector('.dish__name');
           
-            // loop through dishes and return dishes which has at least 1 added to basket
+            // loop through dishes and proceed with function if a dish has at least 1 item added to basket
             for (i = 0; i < allDishes.length; i++) {
                 if (allDishes[i].querySelector('.quantity').innerHTML > 0) {
 
                     // holds the dish information added to cart
-                    const dishInfo = document.createElement('p');
+                    const dishHolder = document.createElement('p');
 
-                    // create the dish name
-                    const dishName = document.createElement('span');
-                    dishName.setAttribute('class', 'dish__in__cart');
-                    const infoToAdd = allDishes[i].querySelector('.dish__name').innerHTML;
-
-                    // append dish name HTML to dish name element we just created
-                    dishName.append(infoToAdd);
+                    // create the dish element
+                    const dishElement = document.createElement('span');
+                    dishElement.setAttribute('class', 'dish__in__cart');
+                    // create the dish type
+                    const DishType = allDishes[i].querySelector('.dish__type').innerHTML;
+                   
 
                     // create the dish quantity
                     const dishQuantity = document.createElement('span');
                     dishQuantity.setAttribute('class', 'dish__quantity__cart');
                     const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
-
-                     // append dish quanity HTML to dish quanity element we just created
                     dishQuantity.append(quanityToAdd);
 
 
-                    // add the dish name and quantity to dish holder
-                    dishInfo.append(dishName, dishQuantity)
+                    // append dish name and type HTML to dish name element we just created
+                    dishElement.append(DishName, DishType, dishQuantity);
+
+
+
+                    // add the dish and type/quanity to the holder
+                    dishHolder.append(dishElement)
 
                     // append the dish to the basket
-                    basket.append(dishInfo);
-
-
-                    // console.log(allDishes[i]);
-                    // addDishesToBasket(allDishes[i].querySelector('.dish__name'), allDishes[i].querySelector('.quantity') );
+                    basket.append(dishHolder);
                 }
             }
-
-
-
-            // function addDishesToBasket(dishName, quantity){
-            //     basket.append(dishName, quantity );
-            // }
-
-
         });
     }
-
-
 });
