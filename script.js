@@ -1,6 +1,5 @@
 
 
-
 document.addEventListener("DOMContentLoaded", function(event) {
  
     const closeModalButtons = document.querySelectorAll(".close__modal");
@@ -254,75 +253,100 @@ for (let i = 0; i < items.length; i++) {
     const basket = document.querySelectorAll('.basket')[0];
     const quantity = document.querySelectorAll('.quantity');
 
-    
-    // when the 'add to order' button is cliked...
-    for (i = 0; i < addToOrder.length; i++) {
-        addToOrder[i].addEventListener('click', function() {
+
+        function addToCart(){
+            console.log('log one');
             for (i = 0; i < quantity.length; i++) {
+                console.log('log two');
                 // get the quantity innerHTML of all items 
                 const quantityOfDishesStrings = quantity[i].innerHTML;
+                populateOrders(quantityOfDishesStrings);
+            }
+            return;
                 // convert these from strings to intergers
-                for (i = 0; i < quantityOfDishesStrings.length; i++) {
-                    const quantityOfDishes = parseFloat(quantityOfDishesStrings[i]);
-     
-            // if dish has already been added , do nothing
-            if ((quantityOfDishes > 0) && (this.closest('.modal__holder').querySelector('.modal__info').querySelector('.added__item'))) {
-                console.log('an item has been added already');
-                // update quantities of items
-                updateQuanities();
-                    function updateQuanities(){
-                          // when the 'add to order' button is cliked...
-                         const CurrentItemQuantities = documen.querySelectorAll('.dish__quantity__cart');
+                // console.log('log three');
+                // for (i = 0; i < quantityOfDishesStrings.length; i++) {
+                //     const quantityOfDishes = parseFloat(quantityOfDishesStrings[i]);
+                //     console.log('the quantity is' + quantityOfDishes);
+                //     // populate orders
+                //     populateOrders(quantityOfDishes);
+                // }
+        
+    }
 
-                        for (i = 0; i < CurrentItemQuantities.length; i++) {
-                            CurrentItemQuantities[i].innerHTML = 12;
-                        }
+            // when the 'add to order' button is cliked...
+            for (i = 0; i < addToOrder.length; i++) {
+                addToOrder[i].addEventListener('click', function() {
+                    addToCart();
+                });
+            }
+
+            function populateOrders(quantityOfDishes){
+                    // if dish has already been added , do nothing
+            // if ((quantityOfDishes > 0) && (this.closest('.modal__holder').querySelector('.modal__info').querySelector('.added__item'))) {
+                console.log('the quantity is' + quantityOfDishes);
+                console.log('log five');
+                // update quantities of items
+                console.log('log six');
+            }
+                // clearInterval(addingStuff);
+                        // console.log('log seven');
+                        //   // when the 'add to order' button is cliked...
+                        //  const CurrentItemQuantities = document.querySelectorAll('.dish__quantity__cart');
+
+                        // for (i = 0; i < CurrentItemQuantities.length; i++) {
+                        //     CurrentItemQuantities[i].innerHTML = 12;
+                        // }
+                        // console.log('log eight');
                     // // create the dish quantity
                     // const dishQuantity = document.createElement('span');
                     // dishQuantity.setAttribute('class', 'dish__quantity__cart');
                     // const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
                     // dishQuantity.append(quanityToAdd);
                     // console.log('update quantities function called');
-                   }
-                 }
-              }
-           }
-            // show orders basket
-            basket.classList.add('slide__basket');
-            // get all the dishes 
-            const allDishes = this.closest('.modal__holder').querySelector('.modal__info').children;
-            // dish name
-            const DishName = this.closest('.modal__holder').querySelector('.dish__name');
+                   
+                //  }
+           
+
+        
+            //   }
+        //    }
+            // // show orders basket
+            // basket.classList.add('slide__basket');
+            // // get all the dishes 
+            // const allDishes = this.closest('.modal__holder').querySelector('.modal__info').children;
+            // // dish name
+            // const DishName = this.closest('.modal__holder').querySelector('.dish__name');
           
             // loop through dishes and proceed with function if a dish has at least 1 item added to basket
-            for (i = 0; i < allDishes.length; i++) {
-                if (allDishes[i].querySelector('.quantity').innerHTML > 0) {
+            // for (i = 0; i < allDishes.length; i++) {
+            //     if (allDishes[i].querySelector('.quantity').innerHTML > 0) {
 
-                    // holds the dish information added to cart
-                    const dishHolder = document.createElement('p');
+            //         // holds the dish information added to cart
+            //         const dishHolder = document.createElement('p');
 
-                    // create the dish element
-                    const dishElement = document.createElement('span');
-                    dishElement.setAttribute('class', 'dish__in__cart');
-                    // create the dish type
-                    const DishType = allDishes[i].querySelector('.dish__type').innerHTML;
+            //         // create the dish element
+            //         const dishElement = document.createElement('span');
+            //         dishElement.setAttribute('class', 'dish__in__cart');
+            //         // create the dish type
+            //         const DishType = allDishes[i].querySelector('.dish__type').innerHTML;
                    
-                    // create the dish quantity
-                    const dishQuantity = document.createElement('span');
-                    dishQuantity.setAttribute('class', 'dish__quantity__cart');
-                    const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
-                    dishQuantity.append(quanityToAdd);
+            //         // create the dish quantity
+            //         const dishQuantity = document.createElement('span');
+            //         dishQuantity.setAttribute('class', 'dish__quantity__cart');
+            //         const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
+            //         dishQuantity.append(quanityToAdd);
 
-                    // append dish name and type HTML to dish name element we just created
-                    dishElement.append(DishName, DishType, dishQuantity);
+            //         // append dish name and type HTML to dish name element we just created
+            //         dishElement.append(DishName, DishType, dishQuantity);
 
-                    // add the dish and type/quanity to the holder
-                    dishHolder.append(dishElement)
+            //         // add the dish and type/quanity to the holder
+            //         dishHolder.append(dishElement)
 
-                    // append the dish to the basket
-                    basket.append(dishHolder);
-                }
-            }
-        });
-    }
+            //         // append the dish to the basket
+            //         basket.append(dishHolder);
+            //     }
+            // }
+        // });
+    // }
 });
