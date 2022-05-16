@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.querySelector('.dark__overlay').style.display = 'none';
             for (i = 0; i < modals.length; i++) {
                 modals[i].style.display = "none";
+                modals[i].classList.remove('current__modal');
             }
         });
     }
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 if (this.dataset.modaltype === modals[i].dataset.modaltype) {
                     modals[i].style.display = "flex";
                     modals[i].scrollTop = 0;
+                    modals[i].classList.add('current__modal');
                     modals[i].querySelector('.style__modal').style.backgroundColor = "black";
                     modals[i].querySelector('.style__modal__cross').style.backgroundColor = "black";
                 }
@@ -251,28 +253,19 @@ for (let i = 0; i < items.length; i++) {
     //  Add orders to cart
     const addToOrder = document.querySelectorAll('.add__to__order');
     const basket = document.querySelectorAll('.basket')[0];
-    const quantity = document.querySelectorAll('.quantity');
 
 
         function addToCart(){
+             //    get item quantities of the open modal 
+            const currentModal = document.querySelector('.current__modal');
+            const quantity = currentModal.querySelectorAll('.quantity');
+            const dish = currentModal.querySelectorAll('.dish__type');
             console.log('log one');
-            for (i = 0; i < quantity.length; i++) {
-                console.log('log two');
-                // get the quantity innerHTML of all items 
-                const quantityOfDishesStrings = quantity[i].innerHTML;
-                populateOrders(quantityOfDishesStrings);
-            }
-            return;
-                // convert these from strings to intergers
-                // console.log('log three');
-                // for (i = 0; i < quantityOfDishesStrings.length; i++) {
-                //     const quantityOfDishes = parseFloat(quantityOfDishesStrings[i]);
-                //     console.log('the quantity is' + quantityOfDishes);
-                //     // populate orders
-                //     populateOrders(quantityOfDishes);
-                // }
-        
-    }
+
+              // show orders basket
+              basket.classList.add('slide__basket');
+      
+        }
 
             // when the 'add to order' button is cliked...
             for (i = 0; i < addToOrder.length; i++) {
@@ -281,72 +274,5 @@ for (let i = 0; i < items.length; i++) {
                 });
             }
 
-            function populateOrders(quantityOfDishes){
-                    // if dish has already been added , do nothing
-            // if ((quantityOfDishes > 0) && (this.closest('.modal__holder').querySelector('.modal__info').querySelector('.added__item'))) {
-                console.log('the quantity is' + quantityOfDishes);
-                console.log('log five');
-                // update quantities of items
-                console.log('log six');
-            }
-                // clearInterval(addingStuff);
-                        // console.log('log seven');
-                        //   // when the 'add to order' button is cliked...
-                        //  const CurrentItemQuantities = document.querySelectorAll('.dish__quantity__cart');
-
-                        // for (i = 0; i < CurrentItemQuantities.length; i++) {
-                        //     CurrentItemQuantities[i].innerHTML = 12;
-                        // }
-                        // console.log('log eight');
-                    // // create the dish quantity
-                    // const dishQuantity = document.createElement('span');
-                    // dishQuantity.setAttribute('class', 'dish__quantity__cart');
-                    // const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
-                    // dishQuantity.append(quanityToAdd);
-                    // console.log('update quantities function called');
-                   
-                //  }
-           
-
-        
-            //   }
-        //    }
-            // // show orders basket
-            // basket.classList.add('slide__basket');
-            // // get all the dishes 
-            // const allDishes = this.closest('.modal__holder').querySelector('.modal__info').children;
-            // // dish name
-            // const DishName = this.closest('.modal__holder').querySelector('.dish__name');
-          
-            // loop through dishes and proceed with function if a dish has at least 1 item added to basket
-            // for (i = 0; i < allDishes.length; i++) {
-            //     if (allDishes[i].querySelector('.quantity').innerHTML > 0) {
-
-            //         // holds the dish information added to cart
-            //         const dishHolder = document.createElement('p');
-
-            //         // create the dish element
-            //         const dishElement = document.createElement('span');
-            //         dishElement.setAttribute('class', 'dish__in__cart');
-            //         // create the dish type
-            //         const DishType = allDishes[i].querySelector('.dish__type').innerHTML;
-                   
-            //         // create the dish quantity
-            //         const dishQuantity = document.createElement('span');
-            //         dishQuantity.setAttribute('class', 'dish__quantity__cart');
-            //         const quanityToAdd = allDishes[i].querySelector('.quantity').innerHTML;
-            //         dishQuantity.append(quanityToAdd);
-
-            //         // append dish name and type HTML to dish name element we just created
-            //         dishElement.append(DishName, DishType, dishQuantity);
-
-            //         // add the dish and type/quanity to the holder
-            //         dishHolder.append(dishElement)
-
-            //         // append the dish to the basket
-            //         basket.append(dishHolder);
-            //     }
-            // }
-        // });
-    // }
+   
 });
