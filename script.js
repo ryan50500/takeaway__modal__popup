@@ -144,14 +144,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
             let priceOfItem = this.parentElement.querySelector('.item').innerHTML;
             let priceOfItemInteger = parseFloat(priceOfItem);
             newUpdated(priceOfItemInteger);
-        });
-
+      
         function newUpdated(priceOfItemInteger){
-            const currentTotal =  document.querySelector('.total').innerHTML;
-            const currentTotalParsed  = parseFloat(currentTotal);
+            console.log('one');
+            let currentTotal = document.querySelector('.current__modal span.total').innerHTML;
+            let currentTotalToParse = parseFloat(currentTotal);
+            console.log(currentTotalToParse);
             // 'priceOfItemInteger' is the item that was clicked on
-            document.querySelector('.total').innerHTML = (currentTotalParsed + priceOfItemInteger).toFixed(2);
+            document.querySelector('.current__modal .total').innerHTML = (currentTotalToParse + priceOfItemInteger).toFixed(2);
+            console.log('four');
         }
+    });
    }
 
 
@@ -234,11 +237,23 @@ for (let i = 0; i < items.length; i++) {
             newUpdated(priceOfItemInteger);
     
             function newUpdated(priceOfItemInteger){
-                const currentTotal =  document.querySelector('.total').innerHTML;
-                const currentTotalParsed  = parseFloat(currentTotal);
+                let currentTotal = document.querySelector('.current__modal span.total').innerHTML;
+                let currentTotalToParse = parseFloat(currentTotal);
                 // 'priceOfItemInteger' is the item that was clicked on
-                document.querySelector('.total').innerHTML = (currentTotalParsed - priceOfItemInteger).toFixed(2);
+                     console.log(currentTotalToParse);
+                    // 'priceOfItemInteger' is the item that was clicked on
+                    document.querySelector('.current__modal .total').innerHTML = (currentTotalToParse - priceOfItemInteger).toFixed(2);
+                    console.log('four');
             }
+            // function newUpdated(priceOfItemInteger){
+            //     console.log('one');
+            //     let currentTotal = document.querySelector('.current__modal span.total').innerHTML;
+            //     let currentTotalToParse = parseFloat(currentTotal);
+            //     console.log(currentTotalToParse);
+            //     // 'priceOfItemInteger' is the item that was clicked on
+            //     document.querySelector('.current__modal .total').innerHTML = (currentTotalToParse + priceOfItemInteger).toFixed(2);
+            //     console.log('four');
+            // }
             // if quanity of item is 0, hide the minus and quanitiy 
             if ( this.parentElement.querySelector('.quantity').innerHTML == 0) {
                 this.parentElement.querySelector('.minus').style.visibility = 'hidden';
@@ -260,11 +275,21 @@ for (let i = 0; i < items.length; i++) {
             const currentModal = document.querySelector('.current__modal');
             const quantity = currentModal.querySelectorAll('.quantity');
             const dish = currentModal.querySelectorAll('.dish__type');
+            const total = currentModal.querySelector('.total');
             console.log('log one');
 
               // show orders basket
               basket.classList.add('slide__basket');
-      
+
+              let addedTotalsForDishes = 0
+
+              const allTotals = document.querySelectorAll('.total')
+              for (let i=0; i < allTotals.length; i++) {
+                addedTotalsForDishes += parseInt(allTotals[i].innerHTML);
+                console.log(addedTotalsForDishes);
+                basket.querySelector('h4 span').innerHTML = addedTotalsForDishes;
+              }
+
         }
 
             // when the 'add to order' button is cliked...
