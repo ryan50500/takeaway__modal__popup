@@ -75,6 +75,9 @@ select {
   }
 }
 
+#sorry {
+    display: none;
+}
 
 .block__dansak {
     background-image: url("./images/dansak.jpg");

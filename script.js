@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const polishZloty = 5.52
     const britishPounds = 5.52;
     const basket = document.querySelector('.basket');
+     // change country
+     const countryOptions = document.querySelectorAll('.country-radio');
 
   
     // Modal change options on mobile
@@ -76,10 +78,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     }
  
-
-    // Change country sidebar
-     // change country
-     const countryOptions = document.querySelectorAll('.country-radio');
    
     
      // open change country slider
@@ -114,14 +112,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   const countryDataSet = countryOptions[i].dataset.country
                if (countryDataSet.toLowerCase().indexOf(userInput) != -1) {
                        countryOptions[i].style.display = "block";
+                       countryOptions[i].classList.add('wehaveit')
                } 
                else if (countryOptions[i].className.match(userInput)) {
                      countryOptions[i].style.display = "block";
+                     countryOptions[i].classList.add('wehaveit')
                }
                else {
-                       countryOptions[i].style.display = "none"
+                     countryOptions[i].style.display = "none";
+                     countryOptions[i].classList.remove('wehaveit')
                }
              }
+            checkForNoMatches();
            }
 
 
@@ -141,7 +143,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
         //     });
         //  }
 
+        function checkForNoMatches(){
+            console.log('checking...');
+                if (document.querySelectorAll('.country-radio.wehaveit').length > 0) {
+                    document.querySelector('#sorry').style.display = 'none';
+                    return;
+                 }
+            else {
+                console.log('nothing');
+                document.querySelector('#sorry').style.display = 'block';
+            }
+        }
+
            
+
+
         //  convert currency to polish zloty
             convertToZloty.addEventListener('click', function(e){
                 covertToZloty();
