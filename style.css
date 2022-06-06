@@ -120,6 +120,9 @@ select {
 /* your orders */
 .basket {
     position: fixed;
+    background-color: lightgrey;
+    padding: 10px 15px 10px 10px;
+    border-radius: 13px;
     top: 0;
     right: 0;
     transform: translate(100%, 2rem);
@@ -133,7 +136,7 @@ select {
     border-radius: 50%;
 }
 .slide__basket {
-    transform: translate(0, 2rem);
+    transform: translate(10px, 2rem);
 }
 .new__el {
     position: absolute;
@@ -272,6 +275,14 @@ div[class^="block__"] {
     background-color: #ffffff;
     padding: 10px 5px;
     border-radius: 10px;
+}
+.basket__flex {
+    display: flex;
+}
+
+span#cart__currency {
+    padding-right: 5px;
+    font-weight: 700;
 }
 
 @media (max-width: 1025px) {

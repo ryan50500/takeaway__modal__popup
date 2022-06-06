@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const convertToPounds = document.querySelectorAll('.gbp')[0];
     const polishZloty = 5.52
     const britishPounds = 5.52;
+    const basket = document.querySelector('.basket');
 
   
     // Modal change options on mobile
@@ -191,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
    function covertToZloty(){
         console.log('zloty clicked');
 
-        document.getElementById('cart__currency').innerHTML = "zł";
+        basket.querySelector('#cart__currency').innerHTML = "zł";
 
         // if zloty is not already selected, proceed
         if (!document.querySelector('.plz').classList.contains('zloty__selected')) {
@@ -216,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
               document.querySelector('.plz').classList.add('zloty__selected');
               document.querySelector('.gbp').classList.remove('pounds__selected');
             // convert basket total to zloty
-            basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML*polishZloty).toFixed(2);
+            basket.querySelector('#cart__sum').innerHTML = (basket.querySelector('#cart__sum').innerHTML*polishZloty).toFixed(2);
         }
     };
 
@@ -250,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.querySelector('.plz').classList.remove('zloty__selected');
             document.querySelector('.gbp').classList.add('pounds__selected');
             // convert basket total to pounds
-            basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML/britishPounds).toFixed(2);
+            basket.querySelector('#cart__sum').innerHTML = (basket.querySelector('#cart__sum').innerHTML/britishPounds).toFixed(2);
         } 
    }
 
@@ -314,7 +315,6 @@ for (let i = 0; i < items.length; i++) {
 
     //  Add orders to cart
     const addToOrder = document.querySelectorAll('.add__to__order');
-    const basket = document.querySelectorAll('.basket')[0];
 
 
         function addToCart(){
@@ -334,7 +334,7 @@ for (let i = 0; i < items.length; i++) {
               for (let i=0; i < allTotals.length; i++) {
                 addedTotalsForDishes += parseInt(allTotals[i].innerHTML);
                 console.log(addedTotalsForDishes);
-                basket.querySelector('h4 span').innerHTML = addedTotalsForDishes;
+                basket.querySelector('#cart__sum').innerHTML = addedTotalsForDishes;
               }
 
         }
