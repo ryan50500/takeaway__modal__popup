@@ -190,6 +190,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // change currency - polish zloty
    function covertToZloty(){
         console.log('zloty clicked');
+
+        document.getElementById('cart__currency').innerHTML = "zł";
+
         // if zloty is not already selected, proceed
         if (!document.querySelector('.plz').classList.contains('zloty__selected')) {
             console.log('converted to polish zloty');
@@ -212,7 +215,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
               document.querySelector('.plz').classList.add('zloty__selected');
               document.querySelector('.gbp').classList.remove('pounds__selected');
-             
             // convert basket total to zloty
             basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML*polishZloty).toFixed(2);
         }
@@ -222,6 +224,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // change currency - british pounds
    function zlotyToPounds(){
         console.log('zloty to pounds');
+
+        document.getElementById('cart__currency').innerHTML = "£";
+
          // if pounds is not already selected, proceed
         if (!document.querySelector('.gbp').classList.contains('pounds__selected')) {
          console.log('converted to pounds');
