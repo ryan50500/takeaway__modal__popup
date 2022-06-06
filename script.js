@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const countryName = document.querySelector('.mobile__jeans__title');
     // current currency
     const currentSymbol = document.querySelectorAll('.currency__symbol')[0];
+    // convert to zloty icon
+    const convertToZloty = document.querySelectorAll('.plz')[0];
+     // convert to pounds icon
+    const convertToPounds = document.querySelectorAll('.gbp')[0];
+    const polishZloty = 5.52
+    const britishPounds = 5.52;
 
   
     // Modal change options on mobile
@@ -119,39 +125,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
         //    if radio button is clicked, convert the currencies
-        const checkboxes = document.querySelectorAll('.country-radio span.checkmark');
-        for (i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].addEventListener('click', function(e){
-                console.log(this);
-                 // if current currency is pounds and user clicks on zloty
-                 if ((this.parentElement.classList.contains('zloty')) && (currentSymbol.innerHTML === '£' )) {
-                // if ((checkboxes[i].parentElement.classList.contains('zloty')) && (currentSymbol.innerHTML === '£' )) {
-                    covertToZloty();
-                    // if current currency is zloty and user clicks on pounds
-                } else if ((this.parentElement.classList.contains('pounds')) && (currentSymbol.innerHTML === 'zł' )) {
-                    zlotyToPounds();
-                }
-            });
-         }
+        // const checkboxes = document.querySelectorAll('.country-radio span.checkmark');
+        // for (i = 0; i < checkboxes.length; i++) {
+        //     checkboxes[i].addEventListener('click', function(e){
+        //         console.log(this);
+        //          // if current currency is pounds and user clicks on zloty
+        //          if ((this.parentElement.classList.contains('zloty')) && (currentSymbol.innerHTML === '£' )) {
+        //         // if ((checkboxes[i].parentElement.classList.contains('zloty')) && (currentSymbol.innerHTML === '£' )) {
+        //             covertToZloty();
+        //             // if current currency is zloty and user clicks on pounds
+        //         } else if ((this.parentElement.classList.contains('pounds')) && (currentSymbol.innerHTML === 'zł' )) {
+        //             zlotyToPounds();
+        //         }
+        //     });
+        //  }
 
            
-        //    update country name to the whichever country the user selects in side menu
-        for (i = 0; i < countryOptions.length; i++) {
-           countryOptions[i].addEventListener('click', function(e){
-                countryName.innerHTML = this.dataset.country;
-                // if currency is already zloty and user clicks on zloty
-                if (e.target.id === "zloty" && currentSymbol.innerHTML ===  'zł' ) {
-                    return; 
-                }
-                else if  (e.target.id === "zloty") {
-                    covertToZloty();
-                }
-                // convert from zloty to pounds
-                 else if (currentSymbol.innerHTML === 'zł' && e.target.id === "pounds") {
-                    zlotyToPounds();
-                }
-         });
-        }
+        //  convert currency to polish zloty
+            convertToZloty.addEventListener('click', function(e){
+                covertToZloty();
+             });
+         //  convert currency to british pounds 
+            convertToPounds.addEventListener('click', function(e){
+                zlotyToPounds();
+             });
+    
   
 
 
@@ -189,37 +187,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-    // change currency - polish zloty
+// change currency - polish zloty
    function covertToZloty(){
-        console.log('zloty clicked')
-        const items = document.querySelectorAll('.modal__info div .item');
-        const totals = document.querySelectorAll('.total');
-        const currencySymbol = document.querySelectorAll('.currency__symbol');
-        const itemCurrency = document.querySelectorAll('.item__currency');
-        const polishZloty = 5.52
-        for (let i = 0; i < items.length; i++) {
-            items[i].innerHTML = (items[i].innerHTML*polishZloty).toFixed(2);
+        console.log('zloty clicked');
+        // if zloty is not already selected, proceed
+        if (!document.querySelector('.plz').classList.contains('zloty__selected')) {
+            console.log('converted to polish zloty');
+                // update the items to Zloty
+            const items = document.querySelectorAll('.modal__info div .item');
+            const totals = document.querySelectorAll('.total');
+            const currencySymbol = document.querySelectorAll('.currency__symbol');
+            const itemCurrency = document.querySelectorAll('.item__currency');
+            for (let i = 0; i < items.length; i++) {
+                items[i].innerHTML = (items[i].innerHTML*polishZloty).toFixed(2);
+            }
+            for (let i = 0; i < totals.length; i++) {
+                totals[i].innerHTML = (totals[i].innerHTML*polishZloty).toFixed(2);
+            }
+            for (i = 0; i < currencySymbol.length; i++) {
+                currencySymbol[i].innerHTML = 'zł';
+            }
+            for (i = 0; i < itemCurrency.length; i++) {
+                itemCurrency[i].innerHTML = 'zł';
+            }
+              document.querySelector('.plz').classList.add('zloty__selected');
+              document.querySelector('.gbp').classList.remove('pounds__selected');
         }
-        for (let i = 0; i < totals.length; i++) {
-            totals[i].innerHTML = (totals[i].innerHTML*polishZloty).toFixed(2);
-        }
-        for (i = 0; i < currencySymbol.length; i++) {
-            currencySymbol[i].innerHTML = 'zł';
-        }
-        for (i = 0; i < itemCurrency.length; i++) {
-            itemCurrency[i].innerHTML = 'zł';
-        }
+        updateCartCurrency();
     };
 
 
-        // change currency - british pounds
+    // change currency - british pounds
    function zlotyToPounds(){
         console.log('zloty to pounds');
+         // if pounds is not already selected, proceed
+        if (!document.querySelector('.gbp').classList.contains('pounds__selected')) {
+         console.log('converted to pounds');
+        // update the items to Pounds
         const items = document.querySelectorAll('.modal__info div .item');
         const totals = document.querySelectorAll('.total');
         const currencySymbol = document.querySelectorAll('.currency__symbol');
         const itemCurrency = document.querySelectorAll('.item__currency');
-        const britishPounds = 5.52;
         for (let i = 0; i < items.length; i++) {
             items[i].innerHTML = (items[i].innerHTML/britishPounds).toFixed(2);
         }
@@ -229,10 +237,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         for (i = 0; i < currencySymbol.length; i++) {
             currencySymbol[i].innerHTML = '£';
         }
-            for (i = 0; i < itemCurrency.length; i++) {
+        for (i = 0; i < itemCurrency.length; i++) {
                 itemCurrency[i].innerHTML = '£';
-            }
-};
+        }
+            document.querySelector('.plz').classList.remove('zloty__selected');
+            document.querySelector('.gbp').classList.add('pounds__selected');
+    } 
+       updateCartCurrency();
+   }
 
   
 
@@ -325,6 +337,26 @@ for (let i = 0; i < items.length; i++) {
                     addToCart();
                 });
             }
+
+        
+            // update the currency of the cart
+        function updateCartCurrency(){
+
+                // // if pounds is already selected, convert cart total to zloty
+                // if (document.querySelector('.gbp').classList.contains('pounds__selected')) {
+                //     basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML*polishZloty).toFixed(2);
+                // }
+                // else {
+                //     // convert cart total to pounds
+                //     basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML/britishPounds).toFixed(2);
+                // }
+
+                
+                 // highlight the currency selected
+                // document.querySelector('.plz').classList.toggle('zloty__selected');
+                // document.querySelector('.gbp').classList.toggle('pounds__selected');
+            
+         }
 
    
 });
