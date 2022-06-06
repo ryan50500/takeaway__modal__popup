@@ -212,8 +212,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
               document.querySelector('.plz').classList.add('zloty__selected');
               document.querySelector('.gbp').classList.remove('pounds__selected');
+             
+            // convert basket total to zloty
+            basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML*polishZloty).toFixed(2);
         }
-        updateCartCurrency();
     };
 
 
@@ -242,8 +244,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
             document.querySelector('.plz').classList.remove('zloty__selected');
             document.querySelector('.gbp').classList.add('pounds__selected');
-    } 
-       updateCartCurrency();
+            // convert basket total to pounds
+            basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML/britishPounds).toFixed(2);
+        } 
    }
 
   
@@ -337,26 +340,5 @@ for (let i = 0; i < items.length; i++) {
                     addToCart();
                 });
             }
-
-        
-            // update the currency of the cart
-        function updateCartCurrency(){
-
-                // // if pounds is already selected, convert cart total to zloty
-                // if (document.querySelector('.gbp').classList.contains('pounds__selected')) {
-                //     basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML*polishZloty).toFixed(2);
-                // }
-                // else {
-                //     // convert cart total to pounds
-                //     basket.querySelector('h4 span').innerHTML = (basket.querySelector('h4 span').innerHTML/britishPounds).toFixed(2);
-                // }
-
-                
-                 // highlight the currency selected
-                // document.querySelector('.plz').classList.toggle('zloty__selected');
-                // document.querySelector('.gbp').classList.toggle('pounds__selected');
-            
-         }
-
    
 });
