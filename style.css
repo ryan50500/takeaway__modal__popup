@@ -77,7 +77,10 @@ select {
 
 #sorry {
     display: none;
+    margin-left: 5%;
+    color: red;
 }
+
 
 .block__dansak {
     background-image: url("./images/dansak.jpg");
@@ -184,7 +187,7 @@ select {
     overflow: hidden;
     background-color: #eef0fb
 }
-.fit__guide * {
+* {
     font-size: 19px;
     font-family: Arial,sans-serif;
 }
@@ -252,6 +255,7 @@ div[class^="block__"] {
     font-family: cursive;
     text-shadow: 2px 2px darkorange;
 }
+
  
 .link__cover {
     width: 100%;
@@ -261,6 +265,8 @@ div[class^="block__"] {
     position: absolute
 }
 
+
+
 .currencies {
     position: absolute;
     left: 50%;
@@ -268,16 +274,38 @@ div[class^="block__"] {
     transform: translate(-50%, 0);
 }
 
-.zloty__selected {
-    background-color: lightcoral;
+.currencies .show__prices {
+    padding-left: 5px;
+}
+
+.currencies .plz, .currencies .gbp {
+    background-color: transparent;
     padding: 10px 5px;
     border-radius: 10px;
+    position: relative;
+    top: 8px;
+}
+
+.currencies .gbp {
+    margin-right: 10px;
+}
+
+
+.currencies .plz:hover, .currencies .gbp:hover {
+    cursor: pointer;
+    box-shadow:  3px 4px 5px #888888;
+}
+
+.zloty__selected {
+    background-color: lightcoral !important;
+    padding: 10px 5px !important;
+    border-radius: 10px !important;
 }
 
 .pounds__selected {
-    background-color: #ffffff;
-    padding: 10px 5px;
-    border-radius: 10px;
+    background-color: #ffffff !important;
+    padding: 10px 5px !important;
+    border-radius: 10px !important;
 }
 .basket__flex {
     display: flex;
@@ -288,12 +316,17 @@ span#cart__currency {
     font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+    .blocks h3 {
+        font-size: 5vw;
+    }
+}
+
 @media (max-width: 1025px) {
     .blog img {
         width: 40%
     }
 }
- 
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
     .square_block {
@@ -306,20 +339,13 @@ span#cart__currency {
         padding-bottom: 0% !important
     }
 }
- 
 
 @media (max-width: 767px) {
-    .fit__guide__hero {
-        padding-top: 64%;
-        background-position-x: 14%
-    }
- 
-    div[class^="block__"] {
-        width: 50%;
-        max-width: 50%;
-        padding-top: 63%
+    * {
+        display: none;
     }
 }
+ 
 .flex__modal::-webkit-scrollbar {
     display: none
 }
@@ -338,41 +364,7 @@ span#cart__currency {
     background-size: cover;
     position: relative
 }
-.options {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 10px;
-    text-align: center;
-    padding-bottom: 1.5rem
-}
- 
-.options button {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    font-size: 1.1rem;
-    font-weight: 700
-}
- 
-@media (min-width: 768px) {
-    .options {
-        display: none
-    }
-}
- 
 
-@media (max-width: 767px) {
-    .box {
-        width: 50%;
-        padding-top: 66%
-    }
-    .mobile__box {
-        width: 50%;
-        padding-top: 66%;
-        display: block;
-        background-color: #ffa89b
-    }
-}
  
 
 .flex__modal {
@@ -384,8 +376,8 @@ span#cart__currency {
     position: fixed;
     top: 50%;
     left: 50%;
-    height: 72%;
-    width: 46%;
+    height: 525px;
+    width: 575px;
     transform: translate(-50%, -50%);
     overflow-y: scroll;
     overflow-x: hidden;
@@ -470,50 +462,6 @@ span#cart__currency {
     flex-wrap: wrap;
     position: relative
 }
-
-
- 
-.options {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 25px;
-    z-index: 99
-}
- 
-.options button {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    font-size: 1.1rem;
-    font-weight: 700;
-    z-index: 99999
-}
- 
-@media (min-width: 768px) {
-    .options {
-        display: none
-    }
-}
- 
-@media (max-width: 767px) {
- 
-    .flex__modal {
-        flex-direction: column;
-       background-color: #ffffff
-    }
-    .image__one {
-        padding-bottom: 124.5% !important;
-        height: auto !important;
-        width: 100% !important
-    }
- 
-    .square_block {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        height: 125vw !important
-    }
-}
  
 @media screen and (orientation: landscape) {
     .portrait__flex {
@@ -538,15 +486,13 @@ span#cart__currency {
     overflow-y: scroll;
     height: 80%;
 }
+.restaurant__postcode br{
+    display: none;
+}   
 .country-radio {
     display: block;
     position: relative;
     padding-left: 35px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     font-size: 16px;
     line-height: 25px;
     color: #000;
@@ -556,6 +502,32 @@ span#cart__currency {
     margin: 0 auto;
     margin-bottom: 16px;
 }
+.restaurant__postcode {
+    opacity: 0;
+    display: block;
+    height: 0;
+    font-size: 14px;
+}  
+.show__postcode {
+    opacity: 1;
+    height: auto;
+    transition: all 1s ease;
+    font-weight: normal !important;
+}  
+.country-radio:hover {
+    transform: scale(1.15);
+    font-weight: 600;
+    cursor: pointer;
+}
+/* .restaurant__postcode {
+    display: none;
+    opacity: 0;
+}   
+.restaurant__postcode.show__address {
+    display: block;
+    opacity: 0;
+    transition: all 2s ease;
+}   */
 .country-radio input {
     position: absolute;
     opacity: 0;
@@ -576,6 +548,7 @@ span#cart__currency {
     border-radius: 50%;
     background: black;
 }
+ 
 .checkmark:after {
     content: "";
     position: absolute;
@@ -664,6 +637,9 @@ h2#change_country {
     color: black;
     margin-bottom: 2rem;
 }
+h2#change_country:hover {
+   cursor: pointer;
+}
 .slide {
     right: -375px;
 }
@@ -712,6 +688,17 @@ h2#change_country {
     justify-content: space-around;
     display: flex;
 }
+
+.add__to__order:hover {
+    background-color: #DDDCDD;
+    box-shadow:  3px 4px 5px #888888;
+}
+
+.add__to__order:active{
+    background-color: #F3F1F3;
+    /* box-shadow:  3px 4px 5px #818181; */
+}
+
 .modal__holder * {
     font-family: Arial, sans-serif;
     cursor: pointer;

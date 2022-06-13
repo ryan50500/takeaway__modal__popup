@@ -17,35 +17,35 @@
   <h2 id="change_country">Find local restaurant</h2>
     <h2 class="mobile__jeans__title">Indian menu</h2>
         <div class="currencies">
-            <h3>Show price in <br><span class="gbp pounds__selected">GBP £ </span><span class="plz">PL zł<span class="plz__image"></span></span></h3>
+            <h3><span class="show__prices">Show prices in</span> <br><span class="gbp pounds__selected">GBP £ </span><span class="plz">PL zł<span class="plz__image"></span></span></h3>
         </div>
     <!-- Image blocks -->
     <div class="blocks">
-        <div class="block__dansak open__modal" data-modaltype="MW_skinny">
+        <div class="block__dansak open__modal" data-modaltype="dansak__modal">
             <h3>Dansak</h3>
         </div>
-        <div class="block__korma open__modal" data-modaltype="MW_slim">
+        <div class="block__korma open__modal" data-modaltype="korma__modal">
             <h3>Korma</h3>
         </div>
-        <div class="block__biryani open__modal" data-modaltype="MW_baggy">
+        <div class="block__biryani open__modal" data-modaltype="biryani__modal">
             <h3>Biryani</h3>
         </div>
-        <div class="block__curry open__modal" data-modaltype="MW_relaxed">
+        <div class="block__curry open__modal" data-modaltype="curry__modal">
             <h3>Curry</h3>
         </div>
-        <div class="block__rogan open__modal" data-modaltype="MW_sprayon">
+        <div class="block__rogan open__modal" data-modaltype="rogan__modal">
             <h3>Rogan Josh</h3>
         </div>
-        <div class="block__tikka open__modal" data-modaltype="MW_straight">
+        <div class="block__tikka open__modal" data-modaltype="tika__modal">
             <h3>Tikka Masala</h3>
         </div>
-        <div class="block__naan open__modal" data-modaltype="MW_bootcut">
+        <div class="block__naan open__modal" data-modaltype="naan__modal">
             <h3>Naan</h3>
         </div>
-        <div class="block__keema open__modal" data-modaltype="MW_tapered">
+        <div class="block__keema open__modal" data-modaltype="keema__modal">
             <h3>Keema</h3>
         </div>
-        <div class="block__bhaji open__modal" data-modaltype="MW_tapered">
+        <div class="block__bhaji open__modal" data-modaltype="onion__modal">
             <h3>onion bhaji</h3>
         </div>
     </div>
@@ -60,7 +60,7 @@
 
 
 <!-- Dansak Modal -->
-<div class="flex__modal MW_skinny" data-modaltype="MW_skinny">
+<div class="flex__modal dansak__modal" data-modaltype="dansak__modal">
     <div class="portrait__flex landscape__block">
         <div class="modal__holder">
             <h3 class="dish__name">Dansak</h3>
@@ -80,17 +80,13 @@
                 </div>
             </div>
         </div>
-        <div class="options">
-            <button class="option__button" data-modaltype="MW_sprayon">˂ SPRAY ON SKINNY</button>
-            <button class="option__button" data-modaltype="MW_skinny">SKINNY ˃</button>
-        </div>
     </div>
 </div>
 
 
 
 <!-- Korma Modal -->
-<div class="flex__modal MW_slim" data-modaltype="MW_slim">
+<div class="flex__modal korma__modal" data-modaltype="korma__modal">
     <div class="portrait__flex landscape__block">
         <div class="modal__holder">
             <h3 class="dish__name">Korma</h3>
@@ -110,18 +106,25 @@
                 </div>
             </div>
         </div>
-        <div class="options">
-            <button class="option__button" data-modaltype="MW_sprayon">˂ SPRAY ON SKINNY</button>
-            <button class="option__button" data-modaltype="MW_skinny">SKINNY ˃</button>
-        </div>
     </div>
 </div>
 
 
-<!-- STRAIGHT MODAL -->
-<div class="flex__modal MW_straight" data-modaltype="MW_straight">
+
+<!-- Biryani Modal -->
+<div class="flex__modal biryani__modal" data-modaltype="biryani__modal">
     <div class="portrait__flex landscape__block">
-        <div class="add__to__order">Add to order<div><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span class="total">0</span></div></div>
+        <div class="modal__holder">
+            <h3 class="dish__name">Biryani</h3>
+            <h4>Choose one</h4>
+            <div class="modal__info">
+                <div class="dish"><span class="dish__type">Vegetable</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">4.80</span></div></div>
+                <div class="dish"><span class="dish__type">Chicken</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">5.00</span></div></div>
+                <div class="dish"><span class="dish__type">Lamb</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">3.00</span></div></div>
+                <div class="dish"><span class="dish__type">Mix Meat</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">4.50</span></div></div>
+            </div>
+            <div class="add__to__order">Update order<div class="another__div"><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span class="total">0</span></div></div>
+         </div>
         <!-- close modal -->
         <div class="close__modal">
             <div class="style__modal">
@@ -129,16 +132,24 @@
                 </div>
             </div>
         </div>
-        <!-- options on mobile -->
-        <div class="options"><button class="option__button" data-modaltype="MW_sprayon">˂ SPRAY ON SKINNY</button><button class="option__button" data-modaltype="MW_skiny">SKINNY ˃</button>
-        </div>
     </div>
 </div>
 
 
-<!-- BAGGY MODAL -->
-<div class="flex__modal MW_baggy" data-modaltype="MW_baggy">
+<!-- Curry Modal -->
+<div class="flex__modal curry__modal" data-modaltype="curry__modal">
     <div class="portrait__flex landscape__block">
+        <div class="modal__holder">
+            <h3 class="dish__name">Curry</h3>
+            <h4>Choose one</h4>
+            <div class="modal__info">
+                <div class="dish"><span class="dish__type">Vegetable</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">3.70</span></div></div>
+                <div class="dish"><span class="dish__type">Chicken</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">6.00</span></div></div>
+                <div class="dish"><span class="dish__type">Lamb</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">2.50</span></div></div>
+                <div class="dish"><span class="dish__type">Mix Meat</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">4.75</span></div></div>
+            </div>
+            <div class="add__to__order">Update order<div class="another__div"><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span class="total">0</span></div></div>
+         </div>
         <!-- close modal -->
         <div class="close__modal">
             <div class="style__modal">
@@ -146,18 +157,24 @@
                 </div>
             </div>
         </div>
-        <!-- options on mobile -->
-        <div class="options"><button class="option__button" data-modaltype="MW_sprayon">˂ SPRAY ON SKINNY</button><button class="option__button" data-modaltype="MW_skiny">SKINNY ˃</button>
-        </div>
     </div>
 </div>
 
 
-
-
-<!-- SPRAY ON SKINNY  MODAL -->
-<div class="flex__modal MW_sprayon" data-modaltype="MW_sprayon">
+<!-- Rogan Modal -->
+<div class="flex__modal rogan__modal" data-modaltype="rogan__modal">
     <div class="portrait__flex landscape__block">
+        <div class="modal__holder">
+            <h3 class="dish__name">Rogan Josh</h3>
+            <h4>Choose one</h4>
+            <div class="modal__info">
+                <div class="dish"><span class="dish__type">Vegetable</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">4.50</span></div></div>
+                <div class="dish"><span class="dish__type">Chicken</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">7.00</span></div></div>
+                <div class="dish"><span class="dish__type">Lamb</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">2.50</span></div></div>
+                <div class="dish"><span class="dish__type">Mix Meat</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">5.00</span></div></div>
+            </div>
+            <div class="add__to__order">Update order<div class="another__div"><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span class="total">0</span></div></div>
+         </div>
         <!-- close modal -->
         <div class="close__modal">
             <div class="style__modal">
@@ -165,18 +182,25 @@
                 </div>
             </div>
         </div>
-        <!-- options on mobile -->
-        <div class="options">
-            <button class="option__button" data-modaltype="MW_relaxed">˂ RELAXED</button>
-            <button class="option__button" data-modaltype="MW_straight">STRAIGHT ˃</button>
-        </div>
     </div>
 </div>
 
 
-<!-- RELAXED MODAL -->
-<div class="flex__modal MW_relaxed" data-modaltype="MW_relaxed">
+
+<!-- Tika Modal -->
+<div class="flex__modal tika__modal" data-modaltype="tika__modal">
     <div class="portrait__flex landscape__block">
+        <div class="modal__holder">
+            <h3 class="dish__name">Tikka Masala</h3>
+            <h4>Choose one</h4>
+            <div class="modal__info">
+                <div class="dish"><span class="dish__type">Vegetable</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">4.50</span></div></div>
+                <div class="dish"><span class="dish__type">Chicken</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">7.00</span></div></div>
+                <div class="dish"><span class="dish__type">Lamb</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">2.50</span></div></div>
+                <div class="dish"><span class="dish__type">Mix Meat</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">5.00</span></div></div>
+            </div>
+            <div class="add__to__order">Update order<div class="another__div"><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span class="total">0</span></div></div>
+         </div>
         <!-- close modal -->
         <div class="close__modal">
             <div class="style__modal">
@@ -184,18 +208,25 @@
                 </div>
             </div>
         </div>
-        <!-- options on mobile -->
-        <div class="options">
-            <button class="option__button" data-modaltype="MW_baggy">˂ Baggy</button>
-            <button class="option__button" data-modaltype="MW_sprayon">Spray On Skinny ˃</button>
-        </div>
     </div>
 </div>
 
 
-<!-- TAPERED MODAL -->
-<div class="flex__modal MW_tapered" data-modaltype="MW_tapered">
+
+<!-- Naan Modal -->
+<div class="flex__modal naan__modal" data-modaltype="naan__modal">
     <div class="portrait__flex landscape__block">
+        <div class="modal__holder">
+            <h3 class="dish__name">Naan</h3>
+            <h4>Choose one</h4>
+            <div class="modal__info">
+                <div class="dish"><span class="dish__type">Vegetable</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">4.50</span></div></div>
+                <div class="dish"><span class="dish__type">Chicken</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">7.00</span></div></div>
+                <div class="dish"><span class="dish__type">Lamb</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">2.50</span></div></div>
+                <div class="dish"><span class="dish__type">Mix Meat</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">5.00</span></div></div>
+            </div>
+            <div class="add__to__order">Update order<div class="another__div"><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span class="total">0</span></div></div>
+         </div>
         <!-- close modal -->
         <div class="close__modal">
             <div class="style__modal">
@@ -203,16 +234,25 @@
                 </div>
             </div>
         </div>
-        <!-- options on mobile -->
-        <div class="options"><button class="option__button" data-modaltype="MW_baggy">˂ Baggy</button><button class="option__button" data-modaltype="MW_sprayon">Spray On Skinny ˃</button>
-        </div>
     </div>
 </div>
 
 
-<!-- BOOTCUT MODAL -->
-<div class="flex__modal MW_bootcut" data-modaltype="MW_bootcut">
+
+<!-- Keema Modal -->
+<div class="flex__modal keema__modal" data-modaltype="keema__modal">
     <div class="portrait__flex landscape__block">
+        <div class="modal__holder">
+            <h3 class="dish__name">Keema</h3>
+            <h4>Choose one</h4>
+            <div class="modal__info">
+                <div class="dish"><span class="dish__type">Vegetable</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">4.50</span></div></div>
+                <div class="dish"><span class="dish__type">Chicken</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">7.00</span></div></div>
+                <div class="dish"><span class="dish__type">Lamb</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">2.50</span></div></div>
+                <div class="dish"><span class="dish__type">Mix Meat</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">5.00</span></div></div>
+            </div>
+            <div class="add__to__order">Update order<div class="another__div"><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span class="total">0</span></div></div>
+         </div>
         <!-- close modal -->
         <div class="close__modal">
             <div class="style__modal">
@@ -220,13 +260,37 @@
                 </div>
             </div>
         </div>
-        <!-- options on mobile -->
-        <div class="options">
-            <button class="option__button" data-modaltype="MW_straight">˂ STRAIGHT</button>
-            <button class="option__button" data-modaltype="MW_Skinny">SKINNY ˃</button>
+    </div>
+</div>
+
+
+
+<!-- Onion Bhaji Modal -->
+<div class="flex__modal onion__modal" data-modaltype="onion__modal">
+    <div class="portrait__flex landscape__block">
+        <div class="modal__holder">
+            <h3 class="dish__name">Onion Bhaji </h3>
+            <h4>Choose one</h4>
+            <div class="modal__info">
+                <div class="dish"><span class="dish__type">Vegetable</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">4.50</span></div></div>
+                <div class="dish"><span class="dish__type">Chicken</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">7.00</span></div></div>
+                <div class="dish"><span class="dish__type">Lamb</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">2.50</span></div></div>
+                <div class="dish"><span class="dish__type">Mix Meat</span><span class="plus">+</span><div class="minus"></div><span class="quantity"></span><div><span class="item__currency">£</span><span>&hairsp;&hairsp;</span><span class="item">5.00</span></div></div>
+            </div>
+            <div class="add__to__order">Update order<div class="another__div"><span class="currency__symbol">£</span><span>&hairsp;&hairsp;</span><span class="total">0</span></div></div>
+         </div>
+        <!-- close modal -->
+        <div class="close__modal">
+            <div class="style__modal">
+                <div class="style__modal__cross">
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+
 
 
 <!-- Change country option -->
@@ -242,15 +306,36 @@
         </div>
     </div>
     <div class="search-bar">
-        <input class="country-search-input visited" id="country-search" placeholder="Search for a country" name="country-search" type="text">
+        <input class="country-search-input visited" id="country-search" placeholder="Find your local!" name="country-search" type="text">
         <button class="searchIcon"></button>
-    </div>x
+    </div>
     <div class="country-list" id="country-list">
-        <h2 id="sorry">sorry nothing near you!</h2>
-            <label class="country-radio" data-country="london">London<input name="radio" type="radio" /></label>
-            <label class="country-radio" data-country="manchester">Manchester<input name="radio" type="radio" /></label>     
-            <label class="country-radio" data-country="liverpool">Liverpool<input name="radio" type="radio" /></label>
-            <label class="country-radio" data-country="birmingham">Birmingham<input name="radio" type="radio" /></label>
+        <h2 id="sorry">Sorry! <br> No restaurants near you </h2>
+            <label class="country-radio" data-country="Wimbledon">Wimbledon<span class="restaurant__postcode"><br>253 Wimbledon Park Rd, London SW19 6NW</span><input name="radio" type="radio"/></label>
+            <label class="country-radio" data-country="wolverhampton">Wolverhampton<span class="restaurant__postcode"><br>5 Union St, Wolverhampton WV1 3JN</span><input name="radio" type="radio" /></label>     
+            <label class="country-radio" data-country="liverpool">Liverpool<span class="restaurant__postcode"><br>5 Anfield Rd, Anfield, Liverpool L4 3JN3JN</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Reading">Reading<span class="restaurant__postcode"><br>51 Anchor Rd, Reading MV1 5J</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Wigan">Wigan<span class="restaurant__postcode"><br>12 Woking St, Wigan GN4 3JN</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Stockport">Stockport<span class="restaurant__postcode"><br>670 Windsor Road, Stockport CR38 1EL</span><span class="restaurant__postcode"><br>cm3 5ds</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Blackpool">Blackpool<span class="restaurant__postcode"><br>73 Grove Road, Blackpool BT67 0QP</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Leeds">Leeds<span class="restaurant__postcode"><br>53 Victoria Road, Leeds SW74 9ZV</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Southampton">Southampton<span class="restaurant__postcode"><br>16 Church Street, Southampton PH39 5GI</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Cardiff">Cardiff<span class="restaurant__postcode"><br>1 Alexander Road, Carfiff HD2 9DH</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Swindon">Swindon<span class="restaurant__postcode"><br>410 Park Avenue, Swindon L10 9WF</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Slough">Slough<span class="restaurant__postcode"><br>433 Springfield Road, Slough S19 0PK</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Brighton">Brighton<span class="restaurant__postcode"><br>66 New Road, Brighton NE37 5EX</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Ashford">Ashford<span class="restaurant__postcode"><br>1 Manor Road, Ashford SL18 7TS</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Harlow">Harlow<span class="restaurant__postcode"><br>96 Queens Road, Harlow PO53 7PZ</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Bishops Stortford">Bishops Stortford<span class="restaurant__postcode"><br>43 Church Lane, Bishops Stortford SE72 6HZ</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Bristol">Bristol<span class="restaurant__postcode"><br>90 The Green, Bristol HA75 7CL</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Ellesmere Port">Ellesmere Port<span class="restaurant__postcode"><br>122 Kingsway, Ellesmere Port RG24 2NU</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Hackney">Hackney<span class="restaurant__postcode"><br>32 Grove Road, Hackney E51 8UO</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Stratford">Stratford<span class="restaurant__postcode"><br>96 Barrow Street, Stratford DT23 3NV</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="North Grenwich">North Grenwich<span class="restaurant__postcode"><br>cm3 5ds</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Richmond">Richmond<span class="restaurant__postcode"><br>211 Albert Road, Richmond FK88 7SY</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="London Bridge">London Bridge<span class="restaurant__postcode"><br>4 Stanley Road, London Bridge EX55 4YN</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Farringdon">Farringdon<span class="restaurant__postcode"><br>45 George Street, Farringdon GL95 1VR</span><input name="radio" type="radio" /></label>
+            <label class="country-radio" data-country="Euston">Euston<span class="restaurant__postcode"><br>4 Euston Road, Euston, SE23 9HG</span><input name="radio" type="radio" /></label>
 
     </div>
 

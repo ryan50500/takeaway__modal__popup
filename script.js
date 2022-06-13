@@ -6,10 +6,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const modals = document.querySelectorAll(".flex__modal");
     const openModalImage = document.querySelectorAll(".open__modal");
     const optionButtons = document.querySelectorAll(".option__button");
-    // update country name
-    const countryName = document.querySelector('.mobile__jeans__title');
-    // current currency
-    const currentSymbol = document.querySelectorAll('.currency__symbol')[0];
     // convert to zloty icon
     const convertToZloty = document.querySelectorAll('.plz')[0];
      // convert to pounds icon
@@ -143,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         //     });
         //  }
 
+        // if user types in a city which has no restaurants, show message
         function checkForNoMatches(){
             console.log('checking...');
                 if (document.querySelectorAll('.country-radio.wehaveit').length > 0) {
@@ -332,7 +329,6 @@ for (let i = 0; i < items.length; i++) {
     //  Add orders to cart
     const addToOrder = document.querySelectorAll('.add__to__order');
 
-
         function addToCart(){
              //    get item quantities of the open modal 
             const currentModal = document.querySelector('.current__modal');
@@ -344,13 +340,14 @@ for (let i = 0; i < items.length; i++) {
               // show orders basket
               basket.classList.add('slide__basket');
 
-              let addedTotalsForDishes = 0
+             let addedTotalsForDishes = 0
 
               const allTotals = document.querySelectorAll('.total')
               for (let i=0; i < allTotals.length; i++) {
-                addedTotalsForDishes += parseInt(allTotals[i].innerHTML);
-                console.log(addedTotalsForDishes);
-                basket.querySelector('#cart__sum').innerHTML = addedTotalsForDishes;
+                addedTotalsForDishes += parseFloat(allTotals[i].innerHTML);
+                let addedTotalsForDishesFixed = addedTotalsForDishes.toFixed(2);
+                console.log(addedTotalsForDishesFixed);
+                basket.querySelector('#cart__sum').innerHTML = addedTotalsForDishesFixed;
               }
 
         }
@@ -361,5 +358,17 @@ for (let i = 0; i < items.length; i++) {
                     addToCart();
                 });
             }
+
+              // show postcode when user hovers over restaurant location
+              for (i = 0; i < countryOptions.length; i++) {
+                countryOptions[i].addEventListener('mouseover', function(){
+                    this.querySelector('.restaurant__postcode').classList.add('show__postcode');
+                });
+                // hide postcode when user hovers away
+                countryOptions[i].addEventListener('mouseleave', function(){
+                    this.querySelector('.restaurant__postcode').classList.remove('show__postcode');
+                });
+             } 
+         
    
 });
